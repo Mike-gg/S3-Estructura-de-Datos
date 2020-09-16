@@ -59,7 +59,7 @@ namespace Estructuras_primitivas
                         r = Math.Abs(x);
                         Console.WriteLine("El valor absoluto de {0} es: {1}.", x, r);
                         Console.WriteLine("Valor absoluto");
-                        r = Math.Abs(y);
+                        r2 = Math.Abs(y);
                         Console.WriteLine("El valor absoluto de {0} es: {1}.", y, r2);
                     break;
                 
