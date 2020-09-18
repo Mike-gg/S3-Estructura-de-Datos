@@ -50,7 +50,7 @@ namespace _2_manejo_de_estructuras
                     string r = Console.ReadLine();
 
                     string remplazo = cadena.Replace(l, r);
-                    Console.WriteLine("Reemplazo de" + l + "por" + r + "y este queda: {0}", remplazo);
+                    Console.WriteLine("Reemplazo de " + l + " por " + r + " y este queda: {0}", remplazo);
 
                 break;
 
