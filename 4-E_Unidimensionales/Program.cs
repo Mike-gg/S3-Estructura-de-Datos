@@ -25,10 +25,28 @@ namespace _4_E_Unidimensionales
                 c[v] = Convert.ToUInt16(Console.ReadLine());
                 Console.WriteLine();
             }
+            int mn = 6, mx = 8;
 
-            for(int v=0; v<6; v++)
+            for(int i = 0; i < 6; i++)
             {
-                Console.WriteLine(n[v] + " " + c[v]);
+                if(c[i] < mn)
+                {
+                    mn = c[i];
+                    Console.Write("El promedio mas bajo es de: " + n[i] + " : " + c[i]);
+                    Console.WriteLine();
+                }
+            }
+
+            Console.WriteLine();
+
+            for(int i = 0; i <= 6; i++)
+            {
+                if(c[i] > mx)
+                {
+                    mn = c[i];
+                    Console.Write("El promedio mas alto es: " + n[i] + " : " + c[i]);
+                    Console.WriteLine();
+                }
             }
         }
     }
