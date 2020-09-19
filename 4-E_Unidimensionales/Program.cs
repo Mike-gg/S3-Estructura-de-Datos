@@ -39,7 +39,7 @@ namespace _4_E_Unidimensionales
 
             Console.WriteLine();
 
-            for(int i = 0; i <= 6; i++)
+            for(int i = 0; i <= 9; i++)
             {
                 if(c[i] > mx)
                 {
