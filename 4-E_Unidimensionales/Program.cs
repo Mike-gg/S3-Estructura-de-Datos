@@ -10,30 +10,26 @@ namespace _4_E_Unidimensionales
             Console.WriteLine("Alumno: Terrazas Rojo Miguel Arturo");
             Console.WriteLine("Matricula: #19211740");
             Console.WriteLine();
-            string [,] a;
-            a = new string[6,2];
+            
+            string[] n;
+            int[] c;
 
-            //Console.WriteLine("Lista de alumnos ")
-            for(int c = 0; c < 6; c++)
-            {
-                for(int f = 0; f < 2; f++)
-                {
-                    Console.Write("Ingresa el nombre de un estudiante: ");
-                    a[f,c] = Console.ReadLine();
-                    Console.Write("Ingresa su calificación: ");
-                    a[f,c] = Console.ReadLine();
-                    Console.WriteLine();
-                }
+            n = new string[6];
+            c = new int[6];
+
+            for(int v=0; v<6; v++)
+            {  
+                Console.Write("Escribe un nombre: ");
+                n[v] = Console.ReadLine();
+                Console.Write("Escribe su calificación: ");
+                c[v] = Convert.ToUInt16(Console.ReadLine());
+                Console.WriteLine();
             }
 
-            for(int c = 0; c < 6; c++)
+            for(int v=0; v<6; v++)
             {
-                for(int f = 0; f<2; f++)
-                {
-                    Console.Write(" " + a[c,f]);
-                }
+                Console.WriteLine(n[v] + " " + c[v]);
             }
-
         }
     }
 }
