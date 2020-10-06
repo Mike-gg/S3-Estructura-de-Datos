@@ -23,7 +23,7 @@ namespace ES_10_Recursividad_Directa1
                 Console.Write("Registra un número: ");
                 a[c] = Convert.ToInt32(Console.ReadLine());
 
-                Console.Write("Registra un número: ");
+                Console.Write("Registra otro número: ");
                 b[c] = Convert.ToInt32(Console.ReadLine());
             }
 
