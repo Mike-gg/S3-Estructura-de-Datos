@@ -34,7 +34,7 @@ namespace _13_RecInd_Edades
                 i++;
                 Ingresa(x, i, n, ii);
             }
-            else{Console.Clear(); Imprime(x, i, n, ii); }
+            else{Console.Clear(); Imprime(x, i, n, ii);}
         }
         void Imprime(int[] x, int i, int n, int ii)
         {
