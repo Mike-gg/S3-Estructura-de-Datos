@@ -19,7 +19,7 @@ namespace _13_RecInd_multi
             int x = 0, c = 0;
             //int r = 0;
 
-            int [] r = new int[11];
+            int [] r = new int[13];
 
             Console.WriteLine();
 

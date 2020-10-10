@@ -41,7 +41,6 @@ namespace _13_RecInd_Edades
             if(ii<n)
             {
                 Console.WriteLine("Edad guardada: " + x[ii]);
-                //Console.WriteLine(x[ii]);
                 ii++;
                 Imprime(x, i, n, ii);
             }
