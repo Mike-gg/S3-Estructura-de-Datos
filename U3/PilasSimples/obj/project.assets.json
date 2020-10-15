@@ -13,11 +13,11 @@
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "C:\\Users\\rojo_\\Documents\\GitHub\\S3-Estructura-de-Datos\\14_PilasSimples\\14_PilasSimples.csproj",
-      "projectName": "14_PilasSimples",
-      "projectPath": "C:\\Users\\rojo_\\Documents\\GitHub\\S3-Estructura-de-Datos\\14_PilasSimples\\14_PilasSimples.csproj",
+      "projectUniqueName": "C:\\Users\\rojo_\\Documents\\GitHub\\S3-Estructura-de-Datos\\U3\\PilasSimples\\PilasSimples.csproj",
+      "projectName": "PilasSimples",
+      "projectPath": "C:\\Users\\rojo_\\Documents\\GitHub\\S3-Estructura-de-Datos\\U3\\PilasSimples\\PilasSimples.csproj",
       "packagesPath": "C:\\Users\\rojo_\\.nuget\\packages\\",
-      "outputPath": "C:\\Users\\rojo_\\Documents\\GitHub\\S3-Estructura-de-Datos\\14_PilasSimples\\obj\\",
+      "outputPath": "C:\\Users\\rojo_\\Documents\\GitHub\\S3-Estructura-de-Datos\\U3\\PilasSimples\\obj\\",
       "projectStyle": "PackageReference",
       "configFilePaths": [
         "C:\\Users\\rojo_\\AppData\\Roaming\\NuGet\\NuGet.Config",
