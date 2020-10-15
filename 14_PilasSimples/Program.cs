@@ -1,6 +1,6 @@
 ﻿using System;
 
-namespace ES_9
+namespace _14_PilasSimples
 {
     class Program
     {
