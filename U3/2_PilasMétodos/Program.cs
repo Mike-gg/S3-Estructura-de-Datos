@@ -14,6 +14,10 @@ namespace PilasMétodos
 
             Console.WriteLine();
 
+            string [] Ciudades = new string [50];
+            string ciudad, t = " ";
+            int top = 0, o = 1, oo;
+
             do
             {
                 Console.WriteLine("------------MENU------------");
@@ -25,12 +29,8 @@ namespace PilasMétodos
 
                 Console.WriteLine();
 
-                string [] Ciudades = new string [50];
-                string ciudad, t = " ";
-                int top = 0, oo;
-
                 Console.Write("Ingrese una opción: ");
-                int o = Convert.ToInt32(Console.ReadLine());
+                o = Convert.ToInt32(Console.ReadLine());
 
                 Console.Clear();
 
@@ -48,6 +48,8 @@ namespace PilasMétodos
 
                             Console.Write("¿Quiere ingresar otra ciudad? [1] Sí, [2] No: ");
                             oo = Convert.ToInt32(Console.ReadLine());
+
+                            Console.WriteLine();
                         }while(oo == 1);
 
                         Console.Clear();
@@ -57,7 +59,10 @@ namespace PilasMétodos
                         do
                         {
                             Console.WriteLine("Tamaño de pila: [" + top + "]");
-                            Console.WriteLine("¿Eliminar ciudades? [1] Sí, [2] No");
+
+                            Console.WriteLine();
+
+                            Console.Write("¿Eliminar ciudades? [1] Sí, [2] No: ");
                             oo = Convert.ToInt32(Console.ReadLine());
 
                             Console.WriteLine();
@@ -65,7 +70,9 @@ namespace PilasMétodos
                             if(oo == 1)
                                 top = Eliminar(Ciudades, top, t);
 
-                        }while()
+                                Console.WriteLine();
+
+                        }while(oo == 1);
 
                         Console.Clear();
                     break;
@@ -77,17 +84,88 @@ namespace PilasMétodos
 
                         Imprimir(Ciudades, top);
 
+                        Console.WriteLine();
+
                         Console.WriteLine("Presiones cualquier tecla para salir");
                         Console.ReadKey();
                         Console.Clear();
                     break;
 
                     case 4:
+                        do
+                        {
+                            Console.Write("¿Desea obtener la ciudad mayor? [1] Sí, [2] No: ");
+                            oo = Convert.ToInt32(Console.ReadLine());
 
+                            Console.WriteLine();
+
+                            if(o == 1)
+                            {
+                                //Mayor(Ciudades, top);
+                            }
+                        }while(00 == 1);
+
+                        Console.Clear();
+                    break;
+
+                    default:
+                        o = 0;
                     break;
                 }
             }
-            while()
+            while(o != 0);
+        }
+        public static bool full(int top)
+        {
+            if(top == 50)
+                return true;
+            else
+                return false;
+        }
+        public static bool empty(int top)
+        {
+            if(top == -1)
+                return true;
+            else
+                return false;
+        }
+        public static int Insertar(string[] Ciudades, int top, string ciudad)
+        {
+            if(full(top) == true)
+            {
+                Console.WriteLine("Pila llena");
+                Console.WriteLine();
+            }
+            else
+            {
+                Ciudades[top] = ciudad;
+                top = top + 1;
+            }
+            return top;
+        }
+        public static int Eliminar(string[] Ciudades, int top, string t)
+        {
+            if(empty(top) == true)
+            {
+                Console.WriteLine("Pila vacía");
+                Console.WriteLine();
+            }
+            else
+            {
+                t = Ciudades[top - 1];
+                Console.WriteLine("El valor eliminado fue: " + t);
+                Ciudades[top -1] = " ";
+                top--;
+            }
+            return top;
+        }
+        public static void Imprimir(string[] Ciudades, int top)
+        {
+            for(int i = top-1; i >= 0; i--)
+            {
+                Console.Write("[" + i + "] ");
+                Console.WriteLine(Ciudades[i]);
+            }
         }
     }
 }

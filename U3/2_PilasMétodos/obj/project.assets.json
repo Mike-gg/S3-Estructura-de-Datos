@@ -13,11 +13,11 @@
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "C:\\Users\\rojo_\\Documents\\GitHub\\S3-Estructura-de-Datos\\U3\\PilasMétodos\\PilasMétodos.csproj",
+      "projectUniqueName": "C:\\Users\\rojo_\\Documents\\GitHub\\S3-Estructura-de-Datos\\U3\\2_PilasMétodos\\PilasMétodos.csproj",
       "projectName": "PilasMétodos",
-      "projectPath": "C:\\Users\\rojo_\\Documents\\GitHub\\S3-Estructura-de-Datos\\U3\\PilasMétodos\\PilasMétodos.csproj",
+      "projectPath": "C:\\Users\\rojo_\\Documents\\GitHub\\S3-Estructura-de-Datos\\U3\\2_PilasMétodos\\PilasMétodos.csproj",
       "packagesPath": "C:\\Users\\rojo_\\.nuget\\packages\\",
-      "outputPath": "C:\\Users\\rojo_\\Documents\\GitHub\\S3-Estructura-de-Datos\\U3\\PilasMétodos\\obj\\",
+      "outputPath": "C:\\Users\\rojo_\\Documents\\GitHub\\S3-Estructura-de-Datos\\U3\\2_PilasMétodos\\obj\\",
       "projectStyle": "PackageReference",
       "configFilePaths": [
         "C:\\Users\\rojo_\\AppData\\Roaming\\NuGet\\NuGet.Config",
