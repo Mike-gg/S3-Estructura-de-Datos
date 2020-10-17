@@ -11,12 +11,12 @@
 using System;
 using System.Reflection;
 
-[assembly: System.Reflection.AssemblyCompanyAttribute("11_RecursividadD_SumaNumNat")]
+[assembly: System.Reflection.AssemblyCompanyAttribute("5_ColaSimples2")]
 [assembly: System.Reflection.AssemblyConfigurationAttribute("Debug")]
 [assembly: System.Reflection.AssemblyFileVersionAttribute("1.0.0.0")]
 [assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0")]
-[assembly: System.Reflection.AssemblyProductAttribute("11_RecursividadD_SumaNumNat")]
-[assembly: System.Reflection.AssemblyTitleAttribute("11_RecursividadD_SumaNumNat")]
+[assembly: System.Reflection.AssemblyProductAttribute("5_ColaSimples2")]
+[assembly: System.Reflection.AssemblyTitleAttribute("5_ColaSimples2")]
 [assembly: System.Reflection.AssemblyVersionAttribute("1.0.0.0")]
 
 // Generado por la clase WriteCodeFragment de MSBuild.

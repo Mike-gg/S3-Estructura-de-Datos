@@ -16,7 +16,12 @@ namespace _4_ManejoPilasDinamicas
             Console.WriteLine();
 
             Stack Saldos = new Stack (100);
-            int top = 0, saldo, mayor = 0, menor = 0, o, oo;
+            int top = 0, saldo, o, oo = 0;
+            int i, j, aux;
+            float promedio = 0;
+
+            int [] x = new int [100];
+            //int [] y = new int [100];
 
             do
             {
@@ -29,7 +34,7 @@ namespace _4_ManejoPilasDinamicas
                 Console.WriteLine("[2] Eliminar");
                 Console.WriteLine("[3] Imprimir");
                 Console.WriteLine("[4] Obtener mayor y desplegar");
-                Console.WriteLine("[5] Obtener maenor y desplegar");
+                Console.WriteLine("[5] Obtener menor y desplegar");
                 Console.WriteLine("[6] Obtener promedio");
                 Console.WriteLine("[0] Salir");
 
@@ -53,13 +58,11 @@ namespace _4_ManejoPilasDinamicas
                             if(full(Saldos) != true)
                                 Console.Write("No hay mas espacios");
                             else
+                            {
                                 Saldos.Push(saldo);
-
-                            if(mayor <= saldo)
-                                mayor = saldo;
-
-                            if(menor >= saldo)
-                                menor = saldo;
+                                x[top] = saldo;
+                                top++;
+                            }
 
                             Console.WriteLine();
 
@@ -100,22 +103,68 @@ namespace _4_ManejoPilasDinamicas
                     break;
 
                     case 4:
-                        Console.WriteLine(mayor);
+                        for(i = 0; i < (top-1); i++)
+                        {
+                            for(j = 0; j < (top-1); j++)
+                            {
+                                if(x[top] > x[top+1])
+                                {
+                                    aux = x[top];
+                                    x[top] = x[top+1];
+                                    x[top+1] = aux;
+                                }
+                            }
+                        }
+
+                        Console.WriteLine("Mayor a menor");
+                        for(i = top-1; i > -1; i--)
+                            Console.WriteLine(x[i]);
 
                         Console.Write("Presione una tecla para continuar: ");
                         Console.ReadKey();
                     break;
+
                     case 5:
-                        Console.WriteLine(menor);
+                        for(i = 0; i < (top-1); i++)
+                        {
+                            for(j = 0; j < (top-1); j++)
+                            {
+                                if(x[top] > x[top+1])
+                                {
+                                    aux = x[top];
+                                    x[top] = x[top+1];
+                                    x[top+1] = aux;
+                                }
+                            }
+                        }
+
+                        Console.WriteLine("Menor a mayor");
+                        for(i = 0; i < top; i++)
+                        Console.WriteLine(x[i]);
 
                         Console.Write("Presione una tecla para continuar: ");
                         Console.ReadKey();
+                    break;
+
+                    case 6:
+                        promedio = 0;
+
+                        for(i = (top-1); i > -1; i--)
+                            promedio = promedio + x[i];
+
+                        Console.WriteLine((promedio/(top)));
+
+                        Console.Write("Presione una tecla para continuar: ");
+                        Console.ReadKey();
+                    break;
+
+                    default:
+                        o = 0;
                     break;
                 }
 
             }while(o != 0);
         }
-
         public static bool full(Stack Saldos)
         {
             if(Saldos.Count < 100)
@@ -130,5 +179,6 @@ namespace _4_ManejoPilasDinamicas
             else
                 return false;
         }
+
     }
 }

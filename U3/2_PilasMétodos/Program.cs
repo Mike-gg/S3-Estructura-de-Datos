@@ -1,4 +1,5 @@
 ﻿using System;
+using System.Collections.Generic;
 
 namespace PilasMétodos
 {
@@ -82,6 +83,7 @@ namespace PilasMétodos
 
                         Console.WriteLine();
 
+                        Console.WriteLine("Ciudades de mayor a menor son");
                         Imprimir(Ciudades, top);
 
                         Console.WriteLine();
@@ -99,10 +101,16 @@ namespace PilasMétodos
 
                             Console.WriteLine();
 
-                            if(o == 1)
+                            if(oo == 1)
                             {
-                                //Mayor(Ciudades, top);
+                                Program Me = new Program();
+                                Me.Mayor(Ciudades, top, t);
                             }
+                            
+                            Console.WriteLine();
+
+                            Console.WriteLine("Presiones cualquier tecla para salir");
+                            Console.ReadKey();
                         }while(00 == 1);
 
                         Console.Clear();
@@ -166,6 +174,28 @@ namespace PilasMétodos
                 Console.Write("[" + i + "] ");
                 Console.WriteLine(Ciudades[i]);
             }
+        }
+        public void Mayor(string[] Ciudades, int top, string t)
+        {
+            string o = "si";
+            int i = 1;
+            do
+            {
+                i++; o = "si";
+                for(int j = 0; j < (top-1); j++)
+                {
+                    if(string.Compare(Ciudades[j], Ciudades[j+1]) > 0)
+                    {
+                        o = "No";
+                        t = Ciudades[j];
+                        Ciudades[j] = Ciudades[j+1];
+                        Ciudades[j+1] = t;
+                    }
+                } 
+            }while(i < top && o != "si");
+
+            for(int j = (top-1); j > -1; j--)
+                Console.WriteLine(Ciudades[j]);
         }
     }
 }

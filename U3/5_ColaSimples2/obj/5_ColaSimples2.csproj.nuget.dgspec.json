@@ -1,17 +1,17 @@
 {
   "format": 1,
   "restore": {
-    "C:\\Users\\rojo_\\Documents\\GitHub\\S3-Estructura-de-Datos\\11_RecursividadD_SumaNumNat\\11_RecursividadD_SumaNumNat.csproj": {}
+    "C:\\Users\\rojo_\\Documents\\GitHub\\S3-Estructura-de-Datos\\U3\\5_ColaSimples2\\5_ColaSimples2.csproj": {}
   },
   "projects": {
-    "C:\\Users\\rojo_\\Documents\\GitHub\\S3-Estructura-de-Datos\\11_RecursividadD_SumaNumNat\\11_RecursividadD_SumaNumNat.csproj": {
+    "C:\\Users\\rojo_\\Documents\\GitHub\\S3-Estructura-de-Datos\\U3\\5_ColaSimples2\\5_ColaSimples2.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "C:\\Users\\rojo_\\Documents\\GitHub\\S3-Estructura-de-Datos\\11_RecursividadD_SumaNumNat\\11_RecursividadD_SumaNumNat.csproj",
-        "projectName": "11_RecursividadD_SumaNumNat",
-        "projectPath": "C:\\Users\\rojo_\\Documents\\GitHub\\S3-Estructura-de-Datos\\11_RecursividadD_SumaNumNat\\11_RecursividadD_SumaNumNat.csproj",
+        "projectUniqueName": "C:\\Users\\rojo_\\Documents\\GitHub\\S3-Estructura-de-Datos\\U3\\5_ColaSimples2\\5_ColaSimples2.csproj",
+        "projectName": "5_ColaSimples2",
+        "projectPath": "C:\\Users\\rojo_\\Documents\\GitHub\\S3-Estructura-de-Datos\\U3\\5_ColaSimples2\\5_ColaSimples2.csproj",
         "packagesPath": "C:\\Users\\rojo_\\.nuget\\packages\\",
-        "outputPath": "C:\\Users\\rojo_\\Documents\\GitHub\\S3-Estructura-de-Datos\\11_RecursividadD_SumaNumNat\\obj\\",
+        "outputPath": "C:\\Users\\rojo_\\Documents\\GitHub\\S3-Estructura-de-Datos\\U3\\5_ColaSimples2\\obj\\",
         "projectStyle": "PackageReference",
         "configFilePaths": [
           "C:\\Users\\rojo_\\AppData\\Roaming\\NuGet\\NuGet.Config",
