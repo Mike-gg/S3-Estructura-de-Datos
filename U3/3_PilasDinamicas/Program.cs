@@ -39,7 +39,7 @@ namespace _3_PilasDinamicas
                 switch(o)
                 {
                     case 1:
-                        top = Insertar(Numeros, num, top, oo);  
+                        top = Insertar(Numeros, num, top, oo, t);  
                     break;
 
                     case 2:
@@ -79,7 +79,7 @@ namespace _3_PilasDinamicas
             else
                 return false;
         }
-        public static int Insertar(int[] Numeros, int num, int top, int oo)
+        public static int Insertar(int[] Numeros, int num, int top, int oo, int t)
         {
             Console.WriteLine("Tamaño de pila: [" + (top + 1) + "]");
             Console.Write("¿Desea ingresar un número? [1] Sí, [2] No: ");
@@ -102,7 +102,7 @@ namespace _3_PilasDinamicas
                     Numeros[top] = num;
                     top = top + 1;
 
-                    Insertar(Numeros, num, top, oo);
+                    Insertar(Numeros, num, top, oo, t);
                 }
             }
             return top;
