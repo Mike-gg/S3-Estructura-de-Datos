@@ -17,7 +17,6 @@ namespace _4_ColasSimples
             string[] Materias = new string [50];
             int[] Calfs = new int [50];
 
-            int T = 0;
             int i = 0, f = -1;
             int clf = 0, ti = 0;
             string mat = " ";

@@ -14,7 +14,6 @@ namespace _6_ColaDoble
             string [] Nombres = new string [100];
             Program Me = new Program();
 
-            int t = 0;
             string name = " ";
             string Lado = null;
 
