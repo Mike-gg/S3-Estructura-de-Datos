@@ -2,22 +2,13 @@
 
 namespace examen
 {
-    class Program
+    class N_mayor
     {
-        static void Main(string[] args)
-        {
-            Console.Clear();
+        static int o;
+        static int mayor;
 
-            int [] Sueldos = new int [5];
-            int mayor = 0;
-            int o = 0;
-
-            Program Me = new Program();
-            Me.Smayor(Sueldos, mayor, o);
-
-            Console.WriteLine("el mayor es: " + mayor);
-        }
-        void Smayor(int[] Sueldos, int mayor, int o)
+        static int [] Sueldos = new int [5];
+        public int Smayor()
         {
             if(o<5)
             {
@@ -28,12 +19,27 @@ namespace examen
                 {
                     mayor = Sueldos[o];
                     o++;
-                    Smayor(Sueldos, mayor, o);
+                    return Smayor();
                 }
                 else
+                {
                     o++;
-                    Smayor(Sueldos, mayor, o);
+                    return Smayor();
+                }
             } 
+            return mayor;
+        }
+    }
+    class Program
+    {
+        static void Main(string[] args)
+        {
+            Console.Clear();
+
+            
+            
+            N_mayor obj = new N_mayor();
+            Console.WriteLine(obj.Smayor());
         }
     }
 }
