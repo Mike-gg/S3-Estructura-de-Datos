@@ -6,7 +6,6 @@ namespace examen
     {
         static int o;
         static int mayor;
-
         static int [] Sueldos = new int [5];
         public int Smayor()
         {
@@ -35,9 +34,6 @@ namespace examen
         static void Main(string[] args)
         {
             Console.Clear();
-
-            
-            
             N_mayor obj = new N_mayor();
             Console.WriteLine(obj.Smayor());
         }

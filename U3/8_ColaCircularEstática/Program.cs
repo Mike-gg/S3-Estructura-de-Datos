@@ -50,14 +50,28 @@ namespace _8_ColaCircularEstática
 
                             Console.Write("¿Desea ingresar otro nombre? [1] Sí, [2] No: ");
                             opc = Convert.ToInt32(Console.ReadLine());
+                            Console.WriteLine();
                         }while(opc == 1);
                     break;
 
                     case 2:
-                        Eliminar(Nombres, n, name);
+                        Console.Clear();
+                        do
+                        {
+                            Console.Write("¿Eliminar nombre? [1] Sí, [2] No");
+                            opc = Convert.ToInt32(Console.ReadLine());
+
+                            Console.WriteLine();
+
+                            Eliminar(Nombres, n, name);
+                            Console.WriteLine();
+                        }
+                        while(opc == 1);
                     break;
 
                     case 3:
+                        Console.Clear();
+                        Console.WriteLine("Los nombres guardados son: ");
                         Imprimir(Nombres, n, name);
                     break;
                 }
@@ -71,6 +85,7 @@ namespace _8_ColaCircularEstática
                 if(i == f)
                 {
                     Console.WriteLine(" Cola llena");
+                    Console.ReadKey();
 
                     if(f == 1)
                         f = n;
@@ -99,7 +114,26 @@ namespace _8_ColaCircularEstática
         }
         public static void Eliminar(string[] Nombres, int f,  string name)
         {
+            if(i == 0)
+            {
+                Console.WriteLine("Cola vacia");
+                Console.ReadKey();
+            }
+            else
+            {
+                name = Nombres[i];
+                Console.WriteLine("El nombre eliminado fue: {0}", name);
+                Console.WriteLine();
+                Console.Write("Presione una tecla para continuar");
+                Console.WriteLine();
+                Console.ReadKey();
+                Nombres[i] = " ";
 
+                if(i == f)
+                    i = 1;
+                else
+                    i = i + 1;
+            }
         }
         public static void Imprimir(string[] Nombres, int n, string name)
         {
@@ -107,7 +141,7 @@ namespace _8_ColaCircularEstática
             {
                 Console.WriteLine(Nombres[a]);
             }
-                Console.WriteLine("Presione una tecla para continuar.");
+                Console.Write("Presione una tecla para continuar.");
                 Console.ReadKey();
         }
     }
