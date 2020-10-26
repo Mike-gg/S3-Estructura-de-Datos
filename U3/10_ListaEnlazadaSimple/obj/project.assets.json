@@ -13,11 +13,11 @@
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "C:\\Users\\rojo_\\Documents\\GitHub\\S3-Estructura-de-Datos\\10_ListaEnlazadaSimple\\10_ListaEnlazadaSimple.csproj",
+      "projectUniqueName": "C:\\Users\\rojo_\\Documents\\GitHub\\S3-Estructura-de-Datos\\U3\\10_ListaEnlazadaSimple\\10_ListaEnlazadaSimple.csproj",
       "projectName": "10_ListaEnlazadaSimple",
-      "projectPath": "C:\\Users\\rojo_\\Documents\\GitHub\\S3-Estructura-de-Datos\\10_ListaEnlazadaSimple\\10_ListaEnlazadaSimple.csproj",
+      "projectPath": "C:\\Users\\rojo_\\Documents\\GitHub\\S3-Estructura-de-Datos\\U3\\10_ListaEnlazadaSimple\\10_ListaEnlazadaSimple.csproj",
       "packagesPath": "C:\\Users\\rojo_\\.nuget\\packages\\",
-      "outputPath": "C:\\Users\\rojo_\\Documents\\GitHub\\S3-Estructura-de-Datos\\10_ListaEnlazadaSimple\\obj\\",
+      "outputPath": "C:\\Users\\rojo_\\Documents\\GitHub\\S3-Estructura-de-Datos\\U3\\10_ListaEnlazadaSimple\\obj\\",
       "projectStyle": "PackageReference",
       "configFilePaths": [
         "C:\\Users\\rojo_\\AppData\\Roaming\\NuGet\\NuGet.Config",
