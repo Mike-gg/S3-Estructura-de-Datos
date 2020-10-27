@@ -67,7 +67,7 @@ namespace _12_ListaEnlazadaSimple_LisT
                     break;
 
                     case 2:
-                        Console.WriteLine("Edades actuales en la lista: [" + ListaS.Count + "]");
+                        Console.WriteLine("Espacios usados en la lista: [" + ListaS.Count + "]");
                         Console.WriteLine();
 
                         Imprimir();
@@ -78,10 +78,11 @@ namespace _12_ListaEnlazadaSimple_LisT
                     case 3:
                     do
                     {
-                        Console.WriteLine("Edades actuales en la lista: [" + ListaS.Count + "]");
+                        Console.Clear();
+                        Console.WriteLine("Espacios usados en la lista: [" + ListaS.Count + "]");
                         Console.WriteLine();
 
-                        Imprimir();
+                        //Imprimir();
 
                         Console.WriteLine();
                         Console.Write("Ingrese la edad a eliminar: ");
@@ -99,28 +100,61 @@ namespace _12_ListaEnlazadaSimple_LisT
                     case 4:
                     do
                     {
+                        Console.Clear();
+                        Console.WriteLine("Espacios usados en la lista: [" + ListaS.Count + "]");
                         Console.WriteLine();
+
+                        Console.WriteLine();
+                        Console.Write("Ingrese la edad a buscar: ");
+                        Busca = int.Parse(Console.ReadLine());
+                        Console.WriteLine();
+
+                        Buscar();
+
+                        Console.WriteLine();
+                        Console.Write("Buscar otra edad? [1] Sí, [2] No: ");
+                        opc = int.Parse(Console.ReadLine());
                     }while(opc == 1);
                     break;
 
                     case 5:
                     do
                     {
+                        Console.Clear();
+                        Console.WriteLine("Espacios usados en la lista: [" + ListaS.Count + "]");
+                        Console.WriteLine("Edades guardados en orden descendente");
                         Console.WriteLine();
+
+                        Mayor();
+                        Console.ReadKey();
+                        Console.Clear();
                     }while(opc == 1);
                     break;
 
                     case 6:
                     do
                     {
+                        Console.Clear();
+                        Console.WriteLine("Espacios usados en la lista: [" + ListaS.Count + "]");
+                        Console.WriteLine("Edades guardados en orden ascendente");
                         Console.WriteLine();
+
+                        Menor();
+                        Console.ReadKey();
+                        Console.Clear();
                     }while(opc == 1);
                     break;
 
                     case 7:
                     do
                     {
+                        Console.Clear();
+                        Console.WriteLine("Edades actuales en la lista: [" + ListaS.Count + "]");
                         Console.WriteLine();
+                        Console.WriteLine("Espacios disponibles: [" + (ListaS.Capacity - ListaS.Count) + "]");
+                        Console.ReadKey();
+                        Console.Clear();
+
                     }while(opc == 1);
                     break;
 
@@ -155,19 +189,40 @@ namespace _12_ListaEnlazadaSimple_LisT
         }
         public static void Eliminar()
         {
+            if(ListaS.Contains(Busca) == true)
+            {
+                ListaS.Remove(Busca);
+                Console.WriteLine("Edad eliminada de la lista: " + Busca);
+            }
+            else
+                Console.WriteLine("No se encontró la edad buscada: " + Busca);
 
         }
         public static void Buscar()
         {
-
+            if(ListaS.Contains(Busca) == true)
+            {
+                Console.WriteLine("Sí se encuentra en la lista: " + Busca);
+            }
+            else
+                Console.WriteLine("No se encontró la edad buscada: " + Busca);
         }
         public static void Mayor()
         {
-
+            ListaS.Sort();
+            ListaS.Reverse();
+            foreach(int x in ListaS)
+            {
+                Console.WriteLine(x);
+            }
         }
         public static void Menor()
         {
-
+            ListaS.Sort();
+            foreach(int x in ListaS)
+            {
+                Console.WriteLine(x);
+            }
         }
         public static void Contador()
         {
