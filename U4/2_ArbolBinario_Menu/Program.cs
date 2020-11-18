@@ -32,7 +32,7 @@ namespace _2_ArbolBinario_Menu
             Console.WriteLine("Materia: 19211740");
             Console.WriteLine();
             Console.Write("Iniciar programa.");
-            Console.Readkey();
+            Console.ReadKey();
             Console.Clear();
 
             do
@@ -45,7 +45,7 @@ namespace _2_ArbolBinario_Menu
                 Console.WriteLine("[0] Salir     ");
                 Console.WriteLine();
                 Console.Write("Ingresa una opción: ");
-                opc = int.parse(Console.ReadLine());
+                opc = int.Parse(Console.ReadLine());
 
                 switch (opc)
                 {
@@ -79,8 +79,6 @@ namespace _2_ArbolBinario_Menu
                 default:
                     opc = 0;
                 break;
-                    
-                    default:
                 }
 
             } while (opc != 0);
