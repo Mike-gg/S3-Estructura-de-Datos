@@ -1,17 +1,14 @@
 ﻿using System;
-
 namespace _5_QuickSort
 {
     class Program
     {
         static int [] edades = new int [10];
-        static int first;
-        static int last;
         static int pivote;
         static int i;
         static int j;
         static int temp;
-        static int central;
+        static int c;
         static void Main(string[] args)
         {
             Console.Clear();
@@ -28,7 +25,7 @@ namespace _5_QuickSort
 
             Ingresar();
             Imprimir();
-            Ordenar(edades, first, last);
+            Ordenar(edades, 0, edades.Length - 1);
         }
         static void Ingresar()
         {
@@ -51,31 +48,32 @@ namespace _5_QuickSort
     }
         static void Ordenar(int [] edades, int first, int last)
         {
-            central = (first + last)/2;
+            c = (first + last)/2;
+            pivote = edades[c];
             i = first;
             j = last;
             do
             {
-                while(edades[j] < pivote) i++;
-                while(edades[j] > pivote) j--;
+                while(edades[i] < pivote) i = i + 1;
+                while(edades[j] > pivote) j = j - 1;
                 if(i <= j)
                 {
                     temp = edades[i];
                     edades[i] = edades[j];
                     edades[j] = temp;
-                    i++;
-                    j--;
+                    i = j + 1;
+                    j = i - 1;
                 }
             }while(i <= j);
 
-            if(first <= j)
-                Ordenar(edades, first, j);
+            if(first < j)
+                {Ordenar(edades, first, j);}
 
             if(i < last)
-                Ordenar(edades, i, last);
+                {Ordenar(edades, i, last);}
 
             Console.Clear();
-            Console.WriteLine("Orden ascendente.");
+            Console.WriteLine("Quick Sort orden ascendente.");
             for(int f = 0; f < edades.Length; f++)
             {
                 Console.Write("[" + edades[f] + "] ");
