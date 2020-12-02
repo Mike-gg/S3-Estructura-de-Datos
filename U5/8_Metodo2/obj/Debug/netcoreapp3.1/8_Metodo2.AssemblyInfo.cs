@@ -11,12 +11,12 @@
 using System;
 using System.Reflection;
 
-[assembly: System.Reflection.AssemblyCompanyAttribute("ShellSort")]
+[assembly: System.Reflection.AssemblyCompanyAttribute("8_Metodo2")]
 [assembly: System.Reflection.AssemblyConfigurationAttribute("Debug")]
 [assembly: System.Reflection.AssemblyFileVersionAttribute("1.0.0.0")]
 [assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0")]
-[assembly: System.Reflection.AssemblyProductAttribute("ShellSort")]
-[assembly: System.Reflection.AssemblyTitleAttribute("ShellSort")]
+[assembly: System.Reflection.AssemblyProductAttribute("8_Metodo2")]
+[assembly: System.Reflection.AssemblyTitleAttribute("8_Metodo2")]
 [assembly: System.Reflection.AssemblyVersionAttribute("1.0.0.0")]
 
 // Generado por la clase WriteCodeFragment de MSBuild.

@@ -1,17 +1,17 @@
 {
   "format": 1,
   "restore": {
-    "C:\\Users\\rojo_\\Documents\\GitHub\\S3-Estructura-de-Datos\\U5\\ShellSort\\ShellSort.csproj": {}
+    "C:\\Users\\rojo_\\Documents\\GitHub\\S3-Estructura-de-Datos\\U5\\8_Metodo2\\8_Metodo2.csproj": {}
   },
   "projects": {
-    "C:\\Users\\rojo_\\Documents\\GitHub\\S3-Estructura-de-Datos\\U5\\ShellSort\\ShellSort.csproj": {
+    "C:\\Users\\rojo_\\Documents\\GitHub\\S3-Estructura-de-Datos\\U5\\8_Metodo2\\8_Metodo2.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "C:\\Users\\rojo_\\Documents\\GitHub\\S3-Estructura-de-Datos\\U5\\ShellSort\\ShellSort.csproj",
-        "projectName": "ShellSort",
-        "projectPath": "C:\\Users\\rojo_\\Documents\\GitHub\\S3-Estructura-de-Datos\\U5\\ShellSort\\ShellSort.csproj",
+        "projectUniqueName": "C:\\Users\\rojo_\\Documents\\GitHub\\S3-Estructura-de-Datos\\U5\\8_Metodo2\\8_Metodo2.csproj",
+        "projectName": "8_Metodo2",
+        "projectPath": "C:\\Users\\rojo_\\Documents\\GitHub\\S3-Estructura-de-Datos\\U5\\8_Metodo2\\8_Metodo2.csproj",
         "packagesPath": "C:\\Users\\rojo_\\.nuget\\packages\\",
-        "outputPath": "C:\\Users\\rojo_\\Documents\\GitHub\\S3-Estructura-de-Datos\\U5\\ShellSort\\obj\\",
+        "outputPath": "C:\\Users\\rojo_\\Documents\\GitHub\\S3-Estructura-de-Datos\\U5\\8_Metodo2\\obj\\",
         "projectStyle": "PackageReference",
         "configFilePaths": [
           "C:\\Users\\rojo_\\AppData\\Roaming\\NuGet\\NuGet.Config",
