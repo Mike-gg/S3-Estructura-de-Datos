@@ -22,7 +22,8 @@ namespace _9_Mezcla
 
             for(int x = 0; x < Edades.Length; x++)
             {
-                Edades[x] = r.Next(0,100);
+                Console.Write("Ingresa una edad [" + (x+1) + "]: ");
+                Edades[x] = int.Parse(Console.ReadLine());
             }
             int i = 0, f = Edades.Length;
 
@@ -35,7 +36,8 @@ namespace _9_Mezcla
             Console.WriteLine();
 
             Console.WriteLine("Ordenados ascendentemente: ");
-            Mezcla(Edades, i,f);   
+            Mezcla(Edades, 0, Edades.Length-1);
+            Imprimir();   
             Console.ReadKey();
         }
         private static void Mezcla(int [] Edades, int i, int f)
@@ -49,7 +51,6 @@ namespace _9_Mezcla
             Mezcla(Edades, m+1, f);
             int [] ax = Merge(Edades, i, m, m+1, f);
             Array.Copy(ax, 0, Edades, i, ax.Length); 
-            Imprimir(ax);
         }
         private static int [] Merge(int [] x, int i1, int f1, int i2, int f2)
         {
@@ -63,24 +64,24 @@ namespace _9_Mezcla
                     if(a > f1 && b <= f2)
                     {
                         M[i] = x[b];
-                        b++;
+                        b = b + 1;
                     }
                     if(b > f2 && a <= f1)
                     {
                         M[i] = x[a];
-                        a++;
+                        a = a + 1;
                     }
                     if(a <= f1 && b <= f2)
                     {
                         if(x[b] <= x[a])
                         {
                             M[i] = x[b];
-                            b++;
+                            b = b + 1;
                         }
                         else
                         {
                             M[i] = x[a];
-                            a++;
+                            a = a + 1;
                         }
                     }
                 }
@@ -89,15 +90,15 @@ namespace _9_Mezcla
                     if(a <= f1)
                     {
                         M[i] = x[a];
-                        a++;
+                        a = a + 1;
                     }
                 }
             }
             return M;
         }
-        private static void Imprimir(int [] ax)
+        private static void Imprimir()
         {
-            foreach (int x in ax)
+            foreach (int x in Edades)
             {
                 Console.WriteLine(x);
             }
