@@ -8,7 +8,7 @@ namespace Estructuras_primitivas
         {
             Console.Title = "PROGRAMA USANDO ESTRUCTURAS PRIMITIVAS";
             
-            int x = 0, p = 0, p2 = 0;
+            int p = 0, p2 = 0;
             double y = 0,r ,r2 = 0, x2 = 0;
 
             Console.WriteLine("Menú de opciones a realizar");

@@ -1,4 +1,5 @@
-﻿using System;
+﻿
+/*using System;
 using System.Collections.Generic;
 
 namespace _6E_Uso_de_conjuntos
@@ -289,3 +290,4 @@ namespace _6E_Uso_de_conjuntos
         }
     }
 }
+*/

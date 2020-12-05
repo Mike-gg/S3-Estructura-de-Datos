@@ -1,5 +1,4 @@
 ﻿using System;
-
 namespace _9_Mezcla
 {
     class Program
@@ -19,14 +18,12 @@ namespace _9_Mezcla
             Console.ReadKey();
 
             Console.Clear();
-
             for(int x = 0; x < Edades.Length; x++)
             {
                 Console.Write("Ingresa una edad [" + (x+1) + "]: ");
                 Edades[x] = int.Parse(Console.ReadLine());
             }
-            int i = 0, f = Edades.Length;
-
+            int f = Edades.Length;
             Console.WriteLine("Orden de ingreso: ");
             foreach (int x in Edades)
             {
