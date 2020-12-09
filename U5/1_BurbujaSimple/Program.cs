@@ -30,7 +30,7 @@ namespace _1_BurbujaSimple
             Console.Clear();
             for(x = 0; x < calfs.Length; x++)
             {
-                Console.Write("Ingrese una calificación: ");
+                Console.Write("Ingrese una calificación: [" + (x+1) + "]");
                 calfs[x] = float.Parse(Console.ReadLine());
             }
         }
@@ -41,7 +41,7 @@ namespace _1_BurbujaSimple
             {
                 for(int b = (calfs.Length-1); b >= a; b--)
                 {
-                    if(calfs[b - 1] > calfs[b])
+                    if(calfs[b - 1] < calfs[b])
                     {
                         t = calfs[b-1];
                         calfs[b - 1] = calfs[b];
@@ -54,9 +54,13 @@ namespace _1_BurbujaSimple
         {
             Console.Clear();
             Console.WriteLine("Ordenado descendente.");
-            for(int f = 29; f > -1; f--)
+            for(int f = 0; f < calfs.Length; f++)
             {
                 Console.Write("[" + calfs[f] + "] ");
+                if (f == 9 || f == 19)
+                {
+                    Console.WriteLine();
+                }
             }
             Console.ReadKey();
         }
