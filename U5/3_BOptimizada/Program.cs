@@ -27,7 +27,7 @@ namespace _3_BOptimizada
             Console.Clear();
             for(int x = 0; x < sueldos.Length; x++)
             {
-                Console.Write("Ingrese un sueldo: ");
+                Console.Write("Ingrese un sueldo  [" + (x+1) + "]: ");
                 sueldos[x] = double.Parse(Console.ReadLine());
             }
         }
@@ -40,7 +40,7 @@ namespace _3_BOptimizada
                 Ordenado = "si";
                 for(int j = 0; j < (sueldos.Length-1); j++)
                 {
-                    if(sueldos[j] > sueldos[j+1])
+                    if(sueldos[j] < sueldos[j+1])
                     {
                     Ordenado = "No";
                     auxi = sueldos[j];
@@ -54,19 +54,29 @@ namespace _3_BOptimizada
             Console.Clear();
 
             Console.WriteLine("Ordenado descendente.");
-            for(int f = 29; f > -1; f--)
+            for(int f = 0; f < sueldos.Length; f++)
             {
-                Console.Write("[" + sueldos[f] + "] ");
+                Console.WriteLine("[" + sueldos[f] + "] ");
             }
             Console.ReadKey();
+            Console.WriteLine();
+
+            float m = sueldos.Length / 2;
+            for (int j = 0; j < sueldos.Length; j++)
+            {
+                if (j == m)
+                {
+                    Console.WriteLine("La mediana es: " + sueldos[j]);
+                }
+            }
         }
         public static void Imprimir()
         {
             Console.Clear();
-            Console.WriteLine("Desordenados.");
+            Console.WriteLine("Sueldos desordenados.");
             for(int f = 0; f < sueldos.Length; f++)
             {
-                Console.Write("[" + sueldos[f] + "] ");
+                Console.WriteLine("[" + sueldos[f] + "] ");
             }
             Console.ReadKey();
             Console.WriteLine();

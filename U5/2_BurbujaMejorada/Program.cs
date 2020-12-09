@@ -60,6 +60,8 @@ namespace _2_BurbujaMejorada
             for(int f = 0; f < names.Length; f++)
             {
                 Console.Write("[" + names[f] + "] ");
+                if(f == 4 || f == 9)
+                    Console.WriteLine();
             }
             Console.ReadKey();
         }
