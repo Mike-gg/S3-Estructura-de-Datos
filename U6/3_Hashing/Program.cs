@@ -7,7 +7,7 @@ namespace _3_Hashing
         static Random r = new Random();
         static int [] c = new int [100];
         static int [] l = new int [100];
-        static int d, dx, N;
+        static int N, i = 0, d, dx, col, k;
 
         static void Main(string[] args)
         {
@@ -53,9 +53,9 @@ namespace _3_Hashing
 
                     case 2:
                     Console.WriteLine("Claves por orden de ingreso.");
-                    foreach (int x in c)
+                    for (int i = 0; i < c.Length; i++)
                     {
-                        Console.WriteLine(x);
+                        Console.WriteLine("[" + (i+1) + "] " + c[i]);
                     }
                     Console.Write("Presione una tecla para continuar.");
                     Console.ReadKey();
@@ -79,7 +79,6 @@ namespace _3_Hashing
         }
         private static void Direcciones()
         {
-            int i = 0, col = 0;
             N = c.Length - 1;
             for (int j = 0; j <= N; j++)
             {
@@ -92,17 +91,16 @@ namespace _3_Hashing
                     else
                         i = col;
                 }
+                l[i] = c[j];
             }
-            l[i] = c[i];
         }
         private static void Buscar()
         {
-            int i, dx, k;
             N = l.Length - 1;
             Console.WriteLine("Claves con índices asignados.");
-            for (int j = 0; j < l.Length; j++)
+            for (int x = 0; x < l.Length; x++)
             {
-                Console.WriteLine("[" + (j+1) + "]" + l[j]);
+                Console.WriteLine("[" + (x+1) + "]" + l[x]);
             }
             Console.WriteLine();
             Console.Write("Ingrese la clave que desee buscar: ");
@@ -111,11 +109,14 @@ namespace _3_Hashing
             i = (k % N) + 1;
 
             if(l[i] == k)
+            {
                 Console.WriteLine("El elemento está en la posición: " + k, i + 1);
+                Console.ReadKey();
+            }
             else
             {
                 dx = i + 1;
-                while (dx <= N && l[dx] != l[dx] && l[dx] != i)
+                while (dx <= N && l[dx] != l[dx] && l[dx] != 0 && dx != i)
                 {
                     dx = dx + 1;
                     if(dx > N)
@@ -125,6 +126,8 @@ namespace _3_Hashing
                     Console.WriteLine("El elemento " + k + "está en la posición " + (dx +1));
                 else
                     Console.WriteLine("El elemento no se encuentra en el arreglo: " + k);
+
+                Console.ReadKey();
             }
         }
     }
