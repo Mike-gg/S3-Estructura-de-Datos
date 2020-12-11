@@ -40,7 +40,7 @@ namespace _4_ShellSort
         Console.WriteLine("Orden ingresado.");
         for(int f = 0; f < nc.Length; f++)
         {
-            Console.Write("[" + nc[f] + "] ");
+            Console.WriteLine("[" + nc[f] + "] ");
         }
         Console.ReadKey();
     }
@@ -73,7 +73,7 @@ namespace _4_ShellSort
         Console.WriteLine("Ordenado ascendente.");
         for(int f = 0; f < nc.Length; f++)
         {
-            Console.Write("[" + nc[f] + "] ");
+            Console.WriteLine("[" + nc[f] + "] ");
         }
         Console.ReadKey();
     }
