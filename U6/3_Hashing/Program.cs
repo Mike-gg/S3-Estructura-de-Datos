@@ -5,9 +5,9 @@ namespace _3_Hashing
     class Program
     {
         static Random r = new Random();
-        static int [] c = new int [100];
-        static int [] l = new int [100];
-        static int N, i = 0, d, dx, col, k;
+        static int [] Cl = new int [6];
+        static int [] Ll = new int [6];
+        static int t = 0, i = 0, c = 0;
 
         static void Main(string[] args)
         {
@@ -33,7 +33,7 @@ namespace _3_Hashing
                 Console.WriteLine("Mostrar claves         [2]");
                 Console.WriteLine("Asignar índices        [3]");
                 Console.WriteLine("Mostrar nuevos índices [4]");
-                Console.WriteLine("Finalizar programa     [0]");
+                Console.WriteLine("Finalizar programa     [5]");
                 Console.WriteLine();
                 Console.Write("Ingrese una opción: ");
                 opc = int.Parse(Console.ReadLine());
@@ -43,9 +43,9 @@ namespace _3_Hashing
                 switch (opc)
                 {
                     case 1:
-                    for (int i = 0; i < c.Length; i++)
+                    for (int j = 0; j < Cl.Length; j++)
                     {
-                        c[i] = r.Next(100, 1500);
+                        Cl[j] = r.Next(100, 1500);
                     }
                     Console.Write("Claves generadas, presione una tecla para continuar.");
                     Console.ReadKey();
@@ -53,9 +53,9 @@ namespace _3_Hashing
 
                     case 2:
                     Console.WriteLine("Claves por orden de ingreso.");
-                    for (int i = 0; i < c.Length; i++)
+                    for (int k = 0; k < Cl.Length; k++)
                     {
-                        Console.WriteLine("[" + (i+1) + "] " + c[i]);
+                        Console.WriteLine("[" + (k+1) + "] " + Cl[k]);
                     }
                     Console.Write("Presione una tecla para continuar.");
                     Console.ReadKey();
@@ -71,61 +71,66 @@ namespace _3_Hashing
                     Buscar();
                     break;
 
+                    case 5:
+                    opc = 5;
+                    break;
+
                     default:
-                    opc = 0;
+                    Console.Write("Error, ingrese una de las opciones dadas.");
+                    Console.ReadKey();
                     break;
                 }
-            } while (opc != 0);
+            } while (opc != 5);
         }
         private static void Direcciones()
         {
-            N = c.Length - 1;
-            for (int j = 0; j <= N; j++)
+            t = Cl.Length - 1;
+            for (int l = 0; l <= t; l++)
             {
-                d = (c[j] % N) + 1;
-                while (l[i] != 0)
+                i = (Cl[l] % t) + 1;
+                while (Ll[i] != 0)
                 {
-                    col = i + 1;
-                    if(col > N)
+                    c = i + 1;
+                    if(c > t)
                         i = 0;
                     else
-                        i = col;
+                        i = c;
                 }
-                l[i] = c[j];
+                Ll[i] = Cl[l];
             }
         }
         private static void Buscar()
         {
-            N = l.Length - 1;
+            t = Ll.Length - 1;
             Console.WriteLine("Claves con índices asignados.");
-            for (int x = 0; x < l.Length; x++)
+            for (int m = 0; m < Ll.Length; m++)
             {
-                Console.WriteLine("[" + (x+1) + "]" + l[x]);
+                Console.WriteLine("[" + (m+1) + "]" + Ll[m]);
             }
             Console.WriteLine();
             Console.Write("Ingrese la clave que desee buscar: ");
-            k = int.Parse(Console.ReadLine());
+            int b = int.Parse(Console.ReadLine());
 
-            i = (k % N) + 1;
+            i = (b % t) + 1;
 
-            if(l[i] == k)
+            if(Ll[i] == b)
             {
-                Console.WriteLine("El elemento está en la posición: " + k, i + 1);
+                Console.WriteLine("El elemento está en la posición: " + (i + 1));
                 Console.ReadKey();
             }
             else
             {
-                dx = i + 1;
-                while (dx <= N && l[dx] != l[dx] && l[dx] != 0 && dx != i)
+                c = i + 1;
+                while (c <= t && Ll[c] != Ll[c] && Ll[c] != 0 && c != i)
                 {
-                    dx = dx + 1;
-                    if(dx > N)
-                        dx = 0;
+                    c = c + 1;
+                    if(c > t)
+                        c = 0;
                 }
-                if(l[dx] == k)
-                    Console.WriteLine("El elemento " + k + "está en la posición " + (dx +1));
+                if(Ll[c] == b)
+                    Console.WriteLine("El elemento " + b + "está en la posición " + (b +1));
                 else
-                    Console.WriteLine("El elemento no se encuentra en el arreglo: " + k);
+                    Console.WriteLine("El elemento no se encuentra en el arreglo: " + b);
 
                 Console.ReadKey();
             }
