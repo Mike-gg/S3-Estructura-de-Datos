@@ -52,7 +52,7 @@ namespace _3_Hashing
                     break;
 
                     case 2:
-                    Console.WriteLine("Claves por orden de ingreso.");
+                    Console.WriteLine("Claves generadas.");
                     for (int k = 0; k < Cl.Length; k++)
                     {
                         Console.WriteLine("[" + (k+1) + "] " + Cl[k]);
@@ -62,7 +62,7 @@ namespace _3_Hashing
                     break;
 
                     case 3:
-                    Direcciones();
+                    Asignar();
                     Console.Write("Índices asignados, presione una tecla para continuar.");
                     Console.ReadKey();
                     break;
@@ -82,7 +82,7 @@ namespace _3_Hashing
                 }
             } while (opc != 5);
         }
-        private static void Direcciones()
+        private static void Asignar()
         {
             t = Cl.Length - 1;
             for (int l = 0; l <= t; l++)
@@ -121,16 +121,16 @@ namespace _3_Hashing
             else
             {
                 c = i + 1;
-                while (c <= t && Ll[c] != Ll[c] && Ll[c] != 0 && c != i)
+                while (c <= t && Ll[c] != b && Ll[c] != 0 && c != i)
                 {
                     c = c + 1;
                     if(c > t)
                         c = 0;
                 }
                 if(Ll[c] == b)
-                    Console.WriteLine("El elemento " + b + "está en la posición " + (b +1));
+                    Console.WriteLine("El elemento " + b + "está en la posición " + b, (c +1));
                 else
-                    Console.WriteLine("El elemento no se encuentra en el arreglo: " + b);
+                    Console.WriteLine("El elemento" + b + "no se encuentra en el arreglo: ");
 
                 Console.ReadKey();
             }
